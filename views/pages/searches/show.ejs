@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello nnnnnnnnn</h1>
+    <% book.forEach((item,idx)=>{%>
+        <div>
+
+            <h2><%=Object.values(item)[0]%></h2>
+            <img src="<%=Object.values(item)[3]%>" alt="">
+
+            <button class="buttonShow">Show More</button>
+            <div>
+                <p><%=Object.values(item)[1]%></p>
+            <p><%=Object.values(item)[2]%></p>
+            <form action="/select" method="post">
+                <input type="text" name="title" value="<%=Object.values(item)[0]%>">
+                <input type="text" name="auther" value="<%=Object.values(item)[1]%>">
+                <textarea name="des" id="" cols="30" rows="10"><%=Object.values(item)[2]%></textarea>
+                <input type="text" name="image" value="<%=Object.values(item)[3]%>">
+
+            <input type="submit"></form>
+            </div>
+
+        </div>
+
+<%})%>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

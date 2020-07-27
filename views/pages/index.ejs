@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>
+
+                <a href="/">show book</a>
+            </li>
+            <li>
+
+                <a href="/new">new search</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+       <% showallbook.forEach(item=>{ %>
+<div>
+    <h2><%= Object.values(item)[1]%></h2>
+    <img src="<%= Object.values(item)[4]%>" alt="">
+    <p><%= Object.values(item)[1]%></p>
+    <a href="/details/<%=Object.values(item)[0]%>">click</a>
+    <!-- <button class="showmoreIndex">show more</button> -->
+    
+</div>
+       <% }) %>
+    </main>
+</body>
+
+</html>
