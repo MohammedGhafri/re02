@@ -64,7 +64,7 @@ function delbook(req,res){
     const id=req.params.deletedbook;
     const SQL=`delete from book where id=${id};`;
     client.query(SQL)
-    .then(()=>res.redirect('/'))
+    .then(()=>res.redirect('/'));
 
     console.log(req.params.deletedbook)
 
